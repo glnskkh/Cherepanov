@@ -7,9 +7,16 @@ int main()
   string s1 = "123";
 
   cout << s1 << endl;
-  cout << sizeof(string) << endl;
-  cout << sizeof(s1) << endl;
   cout << s1.length() << endl;
   cout << s1.capacity() << endl;
-  cout << s1.c_str() << endl;
+
+  s1 += "11111111111111";
+
+  cout << s1 << endl;
+  cout << s1.length() << endl;
+  cout << s1.capacity() << endl;
+
+  const char *p = s1.data();
+
+  cout << p << endl;
 }
