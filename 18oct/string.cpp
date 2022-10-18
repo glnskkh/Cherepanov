@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
-  char s1[] = "121c";
-  char s2[] = "123a";
+  char s1[10] = "121c";
+  char s2[5] = "123a";
 
-  cout << strcmp(s1, s2) << endl;
+  cout << strncat(s1, s2, strlen(s2)) << endl;
 }
