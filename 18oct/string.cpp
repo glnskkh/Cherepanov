@@ -5,11 +5,8 @@ using namespace std;
 
 int main()
 {
-  char string[] = "Hello";
-  // "Hello" => {'H', ..., 'o', '\0'}
+  char s1[] = "121c";
+  char s2[] = "123a";
 
-  cout << string << endl;
-  cout << size(string) << endl;
-  cout << sizeof(string) << endl;
-  cout << strlen(string) << endl;
+  cout << strcmp(s1, s2) << endl;
 }
