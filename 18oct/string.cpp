@@ -8,5 +8,5 @@ int main()
   char s1[10] = "121c";
   char s2[5] = "123a";
 
-  cout << strncat(s1, s2, strlen(s2)) << endl;
+  cout << strcat(s1, s2) << endl;
 }
