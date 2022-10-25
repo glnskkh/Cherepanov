@@ -3,6 +3,8 @@
 
 using namespace std;
 
+#define BUF_MAX 64
+
 int main() {
   const char filename[] = "new.txt";
 
@@ -13,8 +15,8 @@ int main() {
     return -1;
   }
 
-  char buffer[50];
-  while (fgets(buffer, 50, file))
+  char buffer[BUF_MAX];
+  while (fgets(buffer, BUF_MAX, file))
     cout << buffer;
 
   fclose(file);
