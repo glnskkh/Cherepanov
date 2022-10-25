@@ -15,9 +15,21 @@ int main() {
     return -1;
   }
 
+  fseek(file, 0, SEEK_END); // Move cursor
+
+  auto size = ftell(file); // Size of buffer before cursor
+
   char ch;
-  while ((ch = fgetc(file)) != EOF) {
+  while (size > 0) {
+    fseek(file, -1, SEEK_CUR);
+
+    ch = fgetc(file);
+
+    fseek(file, -1, SEEK_CUR);
+
     cout << ch;
+
+    --size;
   }
 
   fclose(file);
