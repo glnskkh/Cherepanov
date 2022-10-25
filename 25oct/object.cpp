@@ -17,9 +17,11 @@ int main() {
 
   char buffer[MAX_BUF];
   while (!file.eof()) {
-    file.getline(buffer, MAX_BUF);
+    string word;
 
-    cout << buffer;
+    file >> word;
+
+    cout << word;
   }
 
   file.close();
