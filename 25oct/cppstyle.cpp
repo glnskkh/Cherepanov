@@ -15,9 +15,10 @@ int main() {
     return -1;
   }
 
-  char buffer[BUF_MAX];
-  while (fgets(buffer, BUF_MAX, file))
-    cout << buffer;
+  char ch;
+  while ((ch = fgetc(file)) != EOF) {
+    cout << ch;
+  }
 
   fclose(file);
 }
