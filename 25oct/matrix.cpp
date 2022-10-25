@@ -27,8 +27,7 @@ int main() {
 
     int scalar = stoi(s);
 
-    matrix[index / n][index % n] = scalar;
-    ++index;
+    *(matrix[0] + index++) = scalar;
   }
 
   for (int i = 0; i < n; ++i) {
