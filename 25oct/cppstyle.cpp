@@ -21,11 +21,11 @@ int main() {
 
   char ch;
   while (size > 0) {
-    fseek(file, -1, SEEK_CUR);
+    fseek(file, size, SEEK_SET);
 
     ch = fgetc(file);
 
-    fseek(file, -1, SEEK_CUR);
+    // fseek(file, -1, SEEK_CUR);
 
     cout << ch;
 
