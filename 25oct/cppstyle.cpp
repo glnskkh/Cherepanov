@@ -17,10 +17,10 @@ int main() {
 
   fseek(file, 0, SEEK_END); // Move cursor
 
-  auto size = ftell(file); // Size of buffer before cursor
+  auto size = ftell(file) - 1; // Size of buffer before cursor
 
   char ch;
-  while (size > 0) {
+  while (size >= 0) {
     fseek(file, size, SEEK_SET);
 
     ch = fgetc(file);
