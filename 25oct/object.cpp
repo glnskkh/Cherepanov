@@ -21,7 +21,7 @@ int main() {
 
     file >> word;
 
-    cout << word;
+    cout << word << " ";
   }
 
   file.close();

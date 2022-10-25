@@ -28,6 +28,6 @@ int main()
 
   while (i < size(arr) && arr[i] != x)
     i++;
-
+q
   cout << i << endl;
 }

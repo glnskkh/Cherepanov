@@ -34,7 +34,7 @@ int main() {
     for (int j = 0; j < m; ++j) {
       cout << matrix[i][j] << " ";
     }
-    cout << endl;
+    cout << endl; // ENDL CLEARS BUFFER!!!
   }
 
   file.close();
