@@ -2,14 +2,24 @@
 
 using namespace std;
 
-const int numbers[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-int foundedNumbers[10];
+#define LEN 10
+
+const int numbers[LEN] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+int foundedNumbers[LEN];
 
 void SelectNumbers(int x, int n = 1) {
-  for (int i = 0; i < 10; ++i)
+  for (int i = 0; i < LEN; ++i)
+    foundedNumbers[i] = 0;
+
+  for (int i = 0; i < LEN; ++i)
     if (numbers[i] == x)
-      for (int j = 0; j < n && j + i < 10; ++j)
+      for (int j = 0; j < n && j + i < LEN; ++j)
         foundedNumbers[j] = numbers[i + j];
+}
+
+void PrintNumbers(int numbers[LEN]) {
+  for (int i = 0; i < LEN; ++i)
+    cout << numbers[i] << endl;
 }
 
 bool Contains(int x) {
@@ -24,17 +34,11 @@ int Square(int x) { return x * x; }
 
 int main() {
   SelectNumbers(1, 2);
-
-  for (int found : foundedNumbers)
-    cout << found << endl;
+  PrintNumbers(foundedNumbers);
 
   SelectNumbers(2, 3);
-
-  for (int found : foundedNumbers)
-    cout << found << endl;
+  PrintNumbers(foundedNumbers);
 
   SelectNumbers(9);
-
-  for (int found : foundedNumbers)
-    cout << found << endl;
+  PrintNumbers(foundedNumbers);
 }
